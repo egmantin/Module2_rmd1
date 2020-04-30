@@ -3,8 +3,8 @@ title: "Module 2- R Markdown Document 1"
 author: "Emily Mantin"
 date: "April 30, 2020"
 output:
-  word_document: default
   html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -76,3 +76,25 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, fig.width=5, fig.height=5, echo = FALSE}
+plot(pressure)
+```
+
+
+
+
+## Insert Tables
+
+```{r}
+knitr::kable(head(cars),
+             caption = "Top 6 rows of Cars Dataset")
+```
+
+
+## Insert an Equation
+
+
+$$ Y = \beta_0 + \beta1x  $$
+
+
